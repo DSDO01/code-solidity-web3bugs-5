@@ -1,7 +1,7 @@
 config:
   framework: "hardhat" 
   framework_version: "^2.2.0" 
-  node_version: "16" 
+  node_version: "18" 
 
 tasks:
   install-dependencies:
