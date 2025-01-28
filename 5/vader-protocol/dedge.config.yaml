@@ -1,0 +1,23 @@
+config:
+  solc: "0.8.19" 
+  framework: "hardhat" 
+  framework_version: "^2.22.8" 
+  node_version: "16" 
+  package_manager: "npm"
+  package_manager_version: "^9.1.1"
+  exclude_detectors:
+    - "missing-zero-check"
+
+environment:
+  SOME_CUSTOM_STRING_ENV_VAR: "some_custom_string_value"
+  SOME_CUSTOM_NUMBER_ENV_VAR: 123
+  SOME_CUSTOM_BOOLEAN_ENV_VAR: true
+  IS_SLITHER: true
+  SOME_TOKEN: "${SECRET_TOKEN}" 
+
+tasks:
+  install-dependencies:
+    - npm install --force
+
+  compile:
+    - npx hardhat compile
